@@ -12,7 +12,7 @@ export default function Navbar() {
   const pathname = usePathname();
   
   // Static Demo State (Set to null to show Register button)
-  const user = null;
+  const user: any = null;
 
   const signOut = () => {
     alert("Sign out clicked (Demo Mode)");
