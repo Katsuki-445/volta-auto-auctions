@@ -5,14 +5,14 @@ import { motion } from 'framer-motion';
 
 export default function BrowseByBrand() {
   const brands = [
-    { name: "Toyota", image: "/1.jpg" },
-    { name: "Range Rover", image: "/range-rover.png" },
-    { name: "Lexus", image: "/lexus-lx.png" },
-    { name: "Mercedes-Benz", image: "/mercedes-glc.png" },
-    { name: "Honda", image: "/honda-accord.png" },
-    { name: "Hyundai", image: "/hyundai-palisade.png" },
-    { name: "Nissan", image: "/nissan-patrol.png" },
-    { name: "Kia", image: "/kia-telluride.png" },
+    { name: "Toyota", image: "https://cdn.simpleicons.org/toyota/FFFFFF" },
+    { name: "Range Rover", image: "/landrover.svg" },
+    { name: "Lexus", image: "/lexus.svg" },
+    { name: "Mercedes", image: "/mercedes.svg" },
+    { name: "Honda", image: "https://cdn.simpleicons.org/honda/FFFFFF" },
+    { name: "Hyundai", image: "https://cdn.simpleicons.org/hyundai/FFFFFF" },
+    { name: "Nissan", image: "https://cdn.simpleicons.org/nissan/FFFFFF" },
+    { name: "Kia", image: "https://cdn.simpleicons.org/kia/FFFFFF" },
   ];
 
   return (
@@ -35,17 +35,16 @@ export default function BrowseByBrand() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
-              className="bg-[#141414] p-6 rounded-[2rem] flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-500 border border-white/5 hover:border-[#C9922A]/40 group"
+              className="bg-[#141414] p-6 rounded-[2rem] flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-500 border border-white/5 hover:border-[#C9922A]/40 group aspect-square"
             >
-              <div className="relative w-full aspect-square mb-4">
-                <Image
+              <div className="w-12 h-12 md:w-16 md:h-16 mb-4 flex items-center justify-center">
+                <img
                   src={brand.image}
                   alt={brand.name}
-                  fill
-                  className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 scale-125"
+                  className="w-full h-full object-contain opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
                 />
               </div>
-              <span className="text-xs md:text-sm font-bold text-gray-400 group-hover:text-white transition-colors uppercase tracking-widest">
+              <span className="text-[10px] md:text-xs font-bold text-gray-500 group-hover:text-[#C9922A] transition-colors uppercase tracking-widest">
                 {brand.name}
               </span>
             </motion.div>
